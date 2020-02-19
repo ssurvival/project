@@ -1,0 +1,22 @@
+
+<h1>
+    WELCOME TEXT
+</h1>
+<fieldset>
+<div *ngIf="!clickMe" class="logIn">
+    <label>USERNAME <input type="text" value="" [(ngModel)]="userName" > </label>
+    <label> PASSWORD <input type="text" value="" [(ngModel)]="passWord" > </label>
+</div>
+
+<div *ngIf="clickMe" class="regOn">
+    <label> E-MAIL<input type="text" value=""> </label>
+    <label>USERNAME <input type="text" value="" > </label>
+    <label> PASSWORD <input type="text" value=""> </label>
+    <label>CONFIRM PASSWORD<input type="text" value=""> </label>
+
+</div>
+</fieldset>
+<button (click)="goIn()" >GO</button>
+<button (click)="clickMe = !clickMe">New User</button>
+
+
